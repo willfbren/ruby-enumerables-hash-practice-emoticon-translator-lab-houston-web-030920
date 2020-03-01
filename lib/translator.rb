@@ -1,8 +1,11 @@
+require 'pry'
 require 'yaml'
 
 def load_library(file_path)
-  file = File.read(file_path)
-  emoticons = YAML.load(file_path)
+  library = YAML.load_file(file_path)
+  result = {"get_meaning" => {}, "get_emoticon" => {}}
+  library.each do |meaning, emoticons|
+    result[]
 end
 
 def get_japanese_emoticon
